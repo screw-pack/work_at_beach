@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+:focus {
+	outline: none;
+}
+
+::-moz-focus-inner{
+	border: 0;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	margin: 0 auto;
+}
+
+header {
+	padding: 1em 0 2em 0;
+	height: 14em;
+	text-align: center;
+	background-image: url(../img/beach-header.jpg);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	color: white;
+}
+
+header h1 {
+	font-family: 'Lobster', cursive;
+	font-size: 3em;
+	text-shadow: 0 0 0.2em #647478;
+}
+
+header p {
+	font-family: 'Indie Flower', cursive;
+	color: black;
+	background-color: white;
+	opacity: 0.7;
+}
+
+#summary_flex {
+	margin: 1em auto;
+	display: flex;
+	padding: 0 0.5em;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-content: stretch;
+	background-color: #afb9bc;
+}
+
+#summary {
+	font-family: 'Quicksand', cursive;
+	position: relative;
+	top: -0.7em;
+	font-size: 2em;
+	text-decoration: none;
+	color: black;
+}
+
+#sum_menu {
+	margin-top: 2em;
+	position: relative;
+	left: -35em;
+	visibility: hidden;
+	text-align: center;
+	transition: left 2s;
+}
+
+#sum_menu a {
+	padding: 1em;
+	text-decoration: none;
+	color : #6a7b7f;
+	font-weight: bold;
+	text-align: center;
+	transition: color 1s;
+}
+
+#sum_menu a:hover {
+	border-bottom: 0.5em solid #c6a974;
+	color: #eaeeef;
+}
+
+main {
+	text-align:  center;
+}
+
+section {
+	margin: 4em auto 2em auto;
+	width: 75%;
+	padding: 1em;
+	border-top: 0.8em double #405c6c;
+	border-bottom: 0.8em double #405c6c;
+	text-align: center;
+}
+
+#logo {
+	margin: 0 auto;
+	padding-bottom: 1em;
+	max-width: 20%;
+	height: auto;
+	border-bottom: 0.3em solid #405c6c;
+}
+
+article {
+	margin: 1em;
+	padding: 1em;
+	font-family: "Quicksand", sans-serif;
+	border: 1px solid #405c6c;
+	border-radius: 40px;
+	background-color: #e6eaed;
+	text-align: left;
+}
+
+article h2 {
+	color: #eefafc;
+	text-shadow: 0 0 0.2em #647478;
+}
+
+article h3 {
+	color: #647478;
+}
+
+article img {
+	display: block;
+	max-width: 90%;
+	margin: 0 auto;
+	height: auto;
+}
+
+article p {
+	text-indent: 1em;
+	margin: 0 1em 1em 0;
+	padding-left: 1em;
+	border-right: 1px solid #785e37;
+	display: inline-block;
+}
+
+article p::first-letter {
+	font-weight: bold;
+	font-size: 1.5em;
+}
+
+article address {
+	font-family: "Raleway", sans-serif;
+	font-size: 0.8em;
+	text-align: right;
+	color: #785e37;
+}
+
+#more {
+	display: none;
+}
+
+#morebtn {
+	margin-left: 2em;
+	border-radius: 5px;
+	font-family: "Open Sans", sans-serif;
+	color : #647478;
+	font-weight: bold;
+	background-color: #faedcd;
+	border: 1px solid #647478;
+}
+
+#morebtn:hover {
+	background-color: #c6a974;
+	color: White;
+}
+
+#back_to_top {
+	padding: 0.2em;
+	font-family: 'Quicksand', sans-serif;
+	font-weight: 700;
+	text-decoration: none;
+	color: #2e4450;
+	border: 0.2em solid #2e4450;
+	border-radius: 20px;
+}
+
+footer {
+	margin-top: 2em;
+	padding-left: 0.5em;
+	background-color: #afb9bc;
+	font-family: "Raleway", sans-serif;
+	font-size: 0.8em;
+}
+
+@media only screen and (max-width: 640px) {
+	header {
+		height: 9em;
+		font-size: 0.6em;
+	}
+	header h1 {
+		font-size: 3em;
+	}
+	#summary {
+		font-size: 1.5em;
+	}
+	section {
+		margin: 2em auto;
+		width: 80%;
+	}
+	body, nav, #morebtn {
+		font-size: 0.7em;
+	}
+}
+
+@media only screen and (min-width: 641px) and (max-width: 768px){
+	header {
+		height: 8em;
+	}
+}
