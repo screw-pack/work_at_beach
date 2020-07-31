@@ -14,7 +14,7 @@
 }
 
 html {
-  font-size: calc(14px + 0.25vw);
+  font-size: calc(10px + 0.5vw);
 }
 
 body {
@@ -24,16 +24,17 @@ body {
 
 header {
 	padding: 1em 0 2em 0;
-	height: 14em;
+	height: 100%;
 	text-align: center;
 	background-image: url(../img/beach-header.jpg);
 	background-size: 100%;
 	background-repeat: no-repeat;
 	color: white;
+	transition: 0.2s;
 }
 
 header h1 {
-	font-family: 'Lobster', cursive;
+	font-family: 'Lobster', sans-serif;
 	font-size: 3em;
 	text-shadow: 0 0 0.2em #647478;
 }
@@ -41,8 +42,7 @@ header h1 {
 header p {
 	font-family: 'Indie Flower', cursive;
 	color: black;
-	background-color: white;
-	opacity: 0.7;
+	background-color: rgba(255, 255, 255, 0.7);
 }
 
 #summary_flex {
@@ -57,9 +57,9 @@ header p {
 }
 
 #summary {
-	font-family: 'Quicksand', cursive;
+	font-family: 'Quicksand', sans-serif;
 	top: -0.7em;
-	font-size: 2em;
+	font-size: 1.5em;
 }
 
 #sum_menu {
@@ -166,6 +166,7 @@ article p:first-child::first-letter {
 }
 
 article address {
+	margin-top: 1em;
 	font-family: "Raleway", sans-serif;
 	font-size: 0.8em;
 	text-align: right;
@@ -177,11 +178,7 @@ article .content{
 	max-height: 3em;
 }
 
-#more {
-	display: none;
-}
-
-#morebtn {
+.more {
 	margin-left: 2em;
 	border-radius: 5px;
 	font-family: "Open Sans", sans-serif;
@@ -191,7 +188,7 @@ article .content{
 	border: 1px solid #647478;
 }
 
-#morebtn:hover {
+.more:hover {
 	background-color: #c6a974;
 	color: White;
 }
@@ -216,26 +213,7 @@ footer {
 
 @media only screen and (max-width: 640px) {
 	header {
-		height: 9em;
+		height: 10em;
 		font-size: 0.6em;
-	}
-	header h1 {
-		font-size: 3em;
-	}
-	#summary {
-		font-size: 1.5em;
-	}
-	section {
-		margin: 2em auto;
-		width: 80%;
-	}
-	body, nav, #morebtn {
-		font-size: 0.7em;
-	}
-}
-
-@media only screen and (min-width: 641px) and (max-width: 768px){
-	header {
-		height: 8em;
 	}
 }
