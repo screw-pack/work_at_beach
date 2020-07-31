@@ -30,3 +30,13 @@ for (element of more) {
     }
   })
 }
+
+var articles = document.getElementsByClassName('articles');
+for (element of articles) {
+  var newLink = document.createElement('a');
+  var txt = element.id.charAt(0).toUpperCase() + element.id.slice(1);
+  var newLinkText = document.createTextNode(txt);
+  newLink.href = '#' + element.id;
+  newLink.appendChild(newLinkText);
+  myNav.appendChild(newLink);
+}
