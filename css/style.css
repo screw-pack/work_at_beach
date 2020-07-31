@@ -126,9 +126,9 @@ section {
 	color: #405c6c;
 }
 
-article {
+.articles {
 	margin: 1em;
-	padding: 1em;
+	/* padding: 1em 0; */
 	font-family: "Quicksand", sans-serif;
 	border: 1px solid #405c6c;
 	border-radius: 40px;
@@ -136,56 +136,58 @@ article {
 	text-align: left;
 }
 
-article h2 {
+.articles h2 {
+	margin-left: 1em;
 	color: #eefafc;
 	text-shadow: 0 0 0.2em #647478;
 }
 
-article h3 {
+.articles h3 {
+	margin-left: 1em;
 	color: #647478;
 }
 
-article img {
+.articles img {
 	display: block;
-	max-width: 90%;
+	max-width: 100%;
 	margin: 0 auto;
 	height: auto;
 }
 
-article p {
-	text-indent: 1em;
-	margin: 0 1em 1em 0;
-	padding-left: 1em;
+.articles .content {
+	margin-right: 5%;
+	overflow: hidden;
+	max-height: 3.3em;
 	border-right: 1px solid #785e37;
+}
+
+.articles p {
+	margin: 0 1% 0 1%;
+	text-indent: 1em;
+	padding-left: 1em;
 	display: inline-block;
 }
 
-article p:first-child::first-letter {
+.articles p:first-child::first-letter {
 	font-weight: bold;
 	font-size: 1.5em;
 }
 
-article address {
-	margin-top: 1em;
+.articles address {
+	margin: 1em 6% 0 0;
 	font-family: "Raleway", sans-serif;
 	font-size: 0.8em;
 	text-align: right;
 	color: #785e37;
 }
 
-article .content{
-	overflow: hidden;
-	max-height: 3em;
-}
-
 .more {
-	margin-left: 2em;
-	border-radius: 5px;
+	margin: 1em 0 1em 2em;
 	font-family: "Open Sans", sans-serif;
 	color : #647478;
-	font-weight: bold;
 	background-color: #faedcd;
 	border: 1px solid #647478;
+	border-radius: 1px 1px 1px 10px;
 }
 
 .more:hover {
@@ -215,5 +217,8 @@ footer {
 	header {
 		height: 10em;
 		font-size: 0.6em;
+	}
+	.more {
+		font-size: 70%;
 	}
 }
