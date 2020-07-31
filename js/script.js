@@ -1,37 +1,32 @@
-function sumDisplay(summary)
-{
-  var myNav = document.getElementById("sum_menu");
-
-  if (myNav.style.visibility === "hidden")
-  {
-    myNav.style.visibility = "visible";
-    myNav.style.left = "0";
-    summary.innerHTML = "Summary"
-  }
-  else
-  {
-    myNav.style.visibility = "hidden";
-    myNav.style.left = "-35em";
-    summary.innerHTML = "Summary..."
-  }
+function isOverflown(element) {
+  return element.scrollHeight > element.clientHeight || element.scrollWidth > element.clientWidth;
 }
-function viewMore(mybtn)
-{
-  var myarticle = mybtn.parentElement;
-  var mypar = myarticle.querySelector("p")
-  var dots = myarticle.querySelector("p #dots");
-  var moreText = myarticle.querySelector("p #more");
 
-  if (dots.style.display === "none")
-  {
-    dots.style.display = "inline";
-    mybtn.innerHTML = "View more";
-    moreText.style.display = "none";
+var myNav = document.getElementById("sum_menu");
+var summary = document.getElementById("summary");
+summary.addEventListener('click', function(event) {
+  if (myNav.className === "hidden") {
+    myNav.className = "";
+    myNav.style.left = "0";
+    summary.innerHTML = "Summary <"
+  } else {
+    myNav.className = "hidden";
+    myNav.style.left = "-35em";
+    summary.innerHTML = "Summary >"
   }
-  else 
-  {
-    dots.style.display = "none";
-    mybtn.innerHTML = "View less";
-    moreText.style.display = "inline";
-  }
+})
+
+var more = document.getElementsByClassName("more");
+for (element of more) {
+  element.addEventListener('click', function(event) {
+    var myarticle = this.parentElement;
+    var content = myarticle.querySelector('.content')
+    if (isOverflown(content)) {
+      content.style.maxHeight = "100%";
+      this.innerHTML = "View less";
+    } else {
+      content.style.maxHeight = "3em";
+      this.innerHTML = "View more";
+    }
+  })
 }

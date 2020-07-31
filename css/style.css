@@ -13,6 +13,10 @@
 	border: 0;
 }
 
+html {
+  font-size: calc(14px + 0.25vw);
+}
+
 body {
 	font-family: 'Montserrat', sans-serif;
 	margin: 0 auto;
@@ -54,20 +58,20 @@ header p {
 
 #summary {
 	font-family: 'Quicksand', cursive;
-	position: relative;
 	top: -0.7em;
 	font-size: 2em;
-	text-decoration: none;
-	color: black;
 }
 
 #sum_menu {
 	margin-top: 2em;
 	position: relative;
 	left: -35em;
-	visibility: hidden;
 	text-align: center;
 	transition: left 2s;
+}
+
+.hidden {
+	visibility: hidden;
 }
 
 #sum_menu a {
@@ -139,7 +143,7 @@ article p {
 	display: inline-block;
 }
 
-article p::first-letter {
+article p:first-child::first-letter {
 	font-weight: bold;
 	font-size: 1.5em;
 }
@@ -149,6 +153,11 @@ article address {
 	font-size: 0.8em;
 	text-align: right;
 	color: #785e37;
+}
+
+article .content{
+	overflow: hidden;
+	max-height: 3em;
 }
 
 #more {
