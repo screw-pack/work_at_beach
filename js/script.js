@@ -8,11 +8,11 @@ summary.addEventListener('click', function(event) {
   if (myNav.className === 'hidden') {
     myNav.className = '';
     myNav.style.left = '0';
-    summary.innerHTML = 'Summary <'
+    summary.innerHTML = 'Summary'
   } else {
     myNav.className = 'hidden';
     myNav.style.left = '-35em';
-    summary.innerHTML = 'Summary >'
+    summary.innerHTML = 'Summary...'
   }
 })
 
@@ -25,7 +25,7 @@ for (element of more) {
       content.style.maxHeight = '100%';
       this.innerHTML = 'View less';
     } else {
-      content.style.maxHeight = '3em';
+      content.style.maxHeight = '4.3em';
       this.innerHTML = 'View more';
     }
   })
